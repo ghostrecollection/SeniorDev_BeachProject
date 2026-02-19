@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Runtime.CompilerServices;
 
 public class playerControllerSideScroll : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class playerControllerSideScroll : MonoBehaviour
     public float walkSpeed;
 
     private Rigidbody playerRB;
+
+    private bool facingRight;
 
     //making reference to future animation that may or may not be used
     //private Animator myAnim;
@@ -19,6 +22,9 @@ public class playerControllerSideScroll : MonoBehaviour
         playerRB = GetComponent<Rigidbody>();
         
         //myAnim = GetComponent<Animator>();
+
+        facingRight = true;
+
 
     }
 
@@ -34,9 +40,23 @@ public class playerControllerSideScroll : MonoBehaviour
         float playerMove = Input.GetAxis("Horizontal");
         //myAnim.SetFloat("speed", Mathf.Abs(move));
 
-        playerRB.angularVelocity = new Vector3(playerMove * walkSpeed, playerRB.angularVelocity.y, 0);    
+        playerRB.linearVelocity = new Vector3(playerMove * walkSpeed, playerRB.linearVelocity.y, 0);    
 
+        if(playerMove > 0 && !facingRight)
+        {
+            Flip();
+        }
 
+        else if (playerMove < 0 && facingRight)
+        {
+            Flip();
+        }    
 
     }
+
+    public void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 scale = transform.localScale;
+    }    
 }
