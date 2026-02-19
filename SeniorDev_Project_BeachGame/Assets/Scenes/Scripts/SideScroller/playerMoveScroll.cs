@@ -12,7 +12,7 @@ public class playerMoveScroll : MonoBehaviour
     public Vector3 jump;
     public float jumpForce = 4f;
 
-    private bool isFacingRight = true;
+    //private bool isFacingRight = true;
 
 
     public bool isGrounded;
