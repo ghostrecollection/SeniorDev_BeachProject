@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - ToLevel
+  - ToSea
   layers:
   - Default
   - TransparentFX

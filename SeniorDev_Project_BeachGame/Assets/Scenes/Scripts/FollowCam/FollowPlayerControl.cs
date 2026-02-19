@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class FollowPlayerControl : MonoBehaviour
 {
@@ -43,5 +45,19 @@ public class FollowPlayerControl : MonoBehaviour
     public void OnCollisionStay(Collision collision)
     {
         isGrounded = true;
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("ToLevel"))
+        {
+            LoadScene("3_Level");
+        }
+        
+    }
+    public void LoadScene(string sceneName)
+
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

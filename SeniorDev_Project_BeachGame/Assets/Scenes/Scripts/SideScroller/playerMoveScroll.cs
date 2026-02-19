@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 public class playerMoveScroll : MonoBehaviour
@@ -44,9 +45,19 @@ public class playerMoveScroll : MonoBehaviour
         
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag)
+    }
 
     private void OnCollisionStay(Collision collision)
     {
         isGrounded = true;
+    }
+
+    public void LoadScene(string sceneName)
+
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

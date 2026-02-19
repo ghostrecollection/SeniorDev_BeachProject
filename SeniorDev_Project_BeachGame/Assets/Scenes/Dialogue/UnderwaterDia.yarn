@@ -1,0 +1,23 @@
+﻿title: UnderwaterDia
+position: -377,-73
+---
+This is an example of a Yarn Spinner script. Write your dialogue here!
+===
+title:ScaredyOcto
+position: 8,-232
+---
+KYAAAAAAAAA YOU HAVE TO HELP ME PLEASE!!!
+THE STOMPERS...
+THEY DESTROYED MY HOUSE PLEASE YOU HAVE TO HELP
+...
+wait...
+You're a stomper...
+AHHHHHHHHHHHHH
+ -> Wait I want to help!!
+    <<jump Helpful>>
+===
+title: Helpful
+---
+R-really? You will?
+This isn't a trick? 
+===
