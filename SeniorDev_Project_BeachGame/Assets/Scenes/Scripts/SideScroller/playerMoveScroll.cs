@@ -47,7 +47,7 @@ public class playerMoveScroll : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag)
+       // if (collision.gameObject.CompareTag)
     }
 
     private void OnCollisionStay(Collision collision)

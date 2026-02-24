@@ -2,9 +2,9 @@ using UnityEngine;
 using System.Collections;
 
 
-public class scrollCamFollow : MonoBehaviour
+public class scrollCamFollow2 : MonoBehaviour
 {
-    public Transform followPlayer;
+    /*public Transform followPlayer;
 
     public float smoothSpeed;
 
@@ -34,5 +34,5 @@ public class scrollCamFollow : MonoBehaviour
 
         }
 
-    }
+    }*/
 }
