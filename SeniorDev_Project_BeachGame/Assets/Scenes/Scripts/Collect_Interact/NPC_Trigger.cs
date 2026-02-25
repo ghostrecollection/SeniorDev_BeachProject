@@ -1,26 +1,15 @@
 using UnityEngine;
 using UnityEngine.Events;
+using Unity.Cinemachine;
 
 public class NPC_Trigger : MonoBehaviour
 {
-    public UnityEvent startDia;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public UnityEvent npcTrigger;
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            startDia.Invoke();
+            npcTrigger.Invoke();
         }
     }
 }
