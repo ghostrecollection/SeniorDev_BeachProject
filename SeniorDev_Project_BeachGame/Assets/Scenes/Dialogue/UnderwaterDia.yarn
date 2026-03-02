@@ -1,23 +1,102 @@
-﻿title: UnderwaterDia
+﻿title:Variables
+position: -357,-312
+---
+<<declare $visitOne = false>>
+<<declare $visitTwo = false>>
+<<declare $allShellsCollected = false>>
+===
+
+title: UnderwaterDia
 position: -377,-73
 ---
-This is an example of a Yarn Spinner script. Write your dialogue here!
+Riley: Ugh...what happened...where am I...
+A...a KINGDOM????
 ===
 title:Octavia
-position: 8,-232
+position: -108,-317
 ---
-KYAAAAAAAAA YOU HAVE TO HELP ME PLEASE!!!
-THE STOMPERS...
-THEY DESTROYED MY HOUSE PLEASE YOU HAVE TO HELP
+Octavia: KYAAAAAAAAAAAAA!!!!
+Please anyone help me please!!!
+You there! Won't you help me please???
+Wait...are you...
+Nevermind that I NEED HELP!!! My home...my poor beautiful amazing fantabulous home...
+IS DESTROYED!!!!
+Please little one...it took me DAYS to gather all the right shells for my home
+and now they are CRUSHED... WAHHHHHHH
 ...
-wait...
-You're a stomper...
-AHHHHHHHHHHHHH
- -> Wait I want to help!!
-    <<jump Helpful>>
+please...won't you help me?
+Riley: Of course Miss...uh...what's your name?
+Octavia: Octavia, dear! You are my savior!!!!
+Riley: No challenge is too tough for me hehe!!
+But actually...how many shells do I need to get?
+Octavia: Oh of course! I need 25 simple shells, 15 sanddollars, and 5 special shells!
+I hope thats not too much! I'm counting on you <3
+<<set $vistitOne = true>>
+
+<<if $visitOne == true>>
+   Octavia: Oh hello little one! Did you have a question?
+    -> What shells do I need again?
+        Oh right! You need 25 simple shells, 25 sandollars, and 5 special shells!
+    -> What are special shells?
+    Special shells are conch,cowrie, or calico clam shells!
+        I'm not too sure where to find them, but someone else might?
+    -> I have your shells!!
+        <<if $allShellsCollected == false>>
+            Really?!?!?!? The day is saved!!! Oh Riley thank you so much!!! 
+            We HAVE to take a picture of your beautiful work!!
+            One second let me grab everyone for the photo!
+        <<elseif $allShellsCollected == true>>
+            Really?!?!?!
+            Wait...aw man thats not funny...
+            Please don't joke...
+            <<endif>>
+    <<endif>>
 ===
-title: Helpful
+
+title:Simon
 ---
-R-really? You will?
-This isn't a trick? 
+Simon: /i/Buuuuuuuurrrrrrrpppppp/i/
+Guh...2 more minutes...
+<<set $visitOne = true>>
+<<if $vistitOne == true>>
+Simon: Uhhhhhhhh...
+Is it time for dinner yet?
+Wah...who are you?
+Riley: I'm Riley!
+Simon: Hi Riley.../i/yaaaawnnnnnnn/i/ I'm Simon...do you need something?
+Riley: I'm looking for simple shells! Do you know where I can find some?
+Simon: Y'know I tried jellyfish once...didn't go well
+...my mouth was numb for days...
+Riley: ...?
+Simon: ...?
+Oh...the shells...jellyfish cove is the place to go
+Lots of simple shells and jellyfish...wish they were yummy...
+Riley: Uh well...thanks!
+<<set $visitTwo = true>>
+<<endif>>
+<<if $visitTwo == true>>
+Simon: /i/ Simple shells...jellyfish...heh...ow...not yummy/i/
+/i/Snoooooooreeeeeeeee/i/
+<<endif>>
+===
+title:TheTwins
+position: 169,-313
+---
+Angel: I swear I saw it!!
+Luis: Angel you gotta be shrimping me! I know you are lying! You ALWAYS lie!
+Angel: Please I swear!! I saw the mega shark!! With my own two eyes!!
+Hey you! You saw it didn't you?
+->Uhhhh I haven't seen any sharks around here...
+    Luis: HAH! No one to vet your story now!
+    Angel:Hmph...one day you'll believe me...
+-> Uh yeah! I saw it the other day!!
+    Angel:See! I told you!
+    Luis: This kid wasn't even here the other day???/
+Luis: Wait...kid...did you need something?
+Riley: Yes! I'm looking for some sandollars but I don't know where to look
+Angel: Oh the urchin cave! It has a tonnnnn of sanddollars!
+Luis: Well he isn't lying...but it's dangerous in there...
+The urchins are nice,but they've got the zoomies
+Just watch out and try not to get pricked!
+<<set $visitOne = true>>
 ===

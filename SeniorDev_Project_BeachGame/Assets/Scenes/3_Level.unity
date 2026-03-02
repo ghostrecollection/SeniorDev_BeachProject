@@ -694,7 +694,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052658391}
   serializedVersion: 5
-  m_Mass: 10
+  m_Mass: 5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -727,10 +727,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::playerMoveScroll
   horizontalInput: 5
   speed: 5
-  jump: {x: 0, y: 5, z: 0}
+  jump: {x: 0, y: 3, z: 0}
   jumpForce: 5
   isGrounded: 0
   moveTime: 0.5
+  doubleJump: 0
+  doubleJumpPower: 3
 --- !u!1 &1132556758
 GameObject:
   m_ObjectHideFlags: 0
