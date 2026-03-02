@@ -16,7 +16,6 @@ position: -357,-312
 //Hugo
 <<declare $visitOneHugo = false >>
 ===
-
 title: UnderwaterDia
 position: -377,-73
 ---
@@ -63,7 +62,6 @@ I hope thats not too much! I'm counting on you <3
             <<endif>>
     <<endif>>
 ===
-
 title:Simon
 ---
 <<if $visitOneSim == false>>
@@ -75,7 +73,7 @@ Guh...2 more minutes...
     Is it time for dinner yet?
     Wah...who are you?
     Riley: I'm Riley!
-    Simon: Hi Riley.../i/yaaaawnnnnnnn/i/ I'm Simon...do you need something?
+    Simon: Hi Riley...<i>yaaaawnnnnnnn<i> I'm Simon...do you need something?
     Riley: I'm looking for simple shells! Do you know where I can find some?
     Simon: Y'know I tried jellyfish once...didn't go well
     ...my mouth was numb for days...
@@ -120,5 +118,21 @@ Just watch out and try not to get pricked!
         Luis:Sorry about that! If you go to the Urchin cave you are sure to find some!
         Angel:But be careful!!
      -> Uh sorry nevermind!
+<<endif>>
+===
+title:Hugo
+---
+<<if $visitOneHugo == false>>
+Hugo: Hey there guppy! The name's Hugo nice to meet 'cha!
+Riley: Guppy? But i'm not a fish...?
+Hugo: Well yer a youngin ain't ya? I mean no harm, yer a little one thats all!
+Riley: Hm, that's true! But the name is Riley!
+Hugo: It's nice to meet you Guppy Riley!
+<<set $visitOneHugo = true>>
+<<elseif $visitOneHugo == true>>
+    Hugo: Hey Guppy Riley! What can I do for ya?
+        -> Where can I find simple shells?
+            Oh well the ol' shipwreck of course!
+            There's both simple shells and some of those er um...sandollars!
 <<endif>>
 ===
