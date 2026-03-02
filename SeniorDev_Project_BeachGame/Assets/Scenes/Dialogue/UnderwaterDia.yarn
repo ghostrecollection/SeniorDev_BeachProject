@@ -1,9 +1,20 @@
 ﻿title:Variables
 position: -357,-312
 ---
-<<declare $visitOne = false>>
-<<declare $visitTwo = false>>
+//Octavia
+<<declare $visitOneOct = false>>
+<<declare $visitTwoOct = false>>
 <<declare $allShellsCollected = false>>
+
+//Simon
+<<declare $visitOneSim = false>>
+<<declare $visitTwoSim = false>>
+
+//The Twins
+<<declare $visitOneShrimp = false>>
+
+//Hugo
+<<declare $visitOneHugo = false >>
 ===
 
 title: UnderwaterDia
@@ -15,6 +26,7 @@ A...a KINGDOM????
 title:Octavia
 position: -108,-317
 ---
+<<if $visitOneOct == false>>
 Octavia: KYAAAAAAAAAAAAA!!!!
 Please anyone help me please!!!
 You there! Won't you help me please???
@@ -31,16 +43,15 @@ Riley: No challenge is too tough for me hehe!!
 But actually...how many shells do I need to get?
 Octavia: Oh of course! I need 25 simple shells, 15 sanddollars, and 5 special shells!
 I hope thats not too much! I'm counting on you <3
-<<set $vistitOne = true>>
-
-<<if $visitOne == true>>
-   Octavia: Oh hello little one! Did you have a question?
-    -> What shells do I need again?
+<<set $visitOneOct = true>>
+    <<elseif $visitOneOct == true>>
+     Octavia: Oh hello little one! Did you have a question?
+     -> What shells do I need again?
         Oh right! You need 25 simple shells, 25 sandollars, and 5 special shells!
-    -> What are special shells?
-    Special shells are conch,cowrie, or calico clam shells!
+     -> What are special shells?
+        Special shells are conch,cowrie, or calico clam shells!
         I'm not too sure where to find them, but someone else might?
-    -> I have your shells!!
+     -> I have your shells!!
         <<if $allShellsCollected == false>>
             Really?!?!?!? The day is saved!!! Oh Riley thank you so much!!! 
             We HAVE to take a picture of your beautiful work!!
@@ -55,39 +66,41 @@ I hope thats not too much! I'm counting on you <3
 
 title:Simon
 ---
-Simon: /i/Buuuuuuuurrrrrrrpppppp/i/
+<<if $visitOneSim == false>>
+Simon:<i>Buuuuuuuurrrrrrrpppppp<i>
 Guh...2 more minutes...
-<<set $visitOne = true>>
-<<if $vistitOne == true>>
-Simon: Uhhhhhhhh...
-Is it time for dinner yet?
-Wah...who are you?
-Riley: I'm Riley!
-Simon: Hi Riley.../i/yaaaawnnnnnnn/i/ I'm Simon...do you need something?
-Riley: I'm looking for simple shells! Do you know where I can find some?
-Simon: Y'know I tried jellyfish once...didn't go well
-...my mouth was numb for days...
-Riley: ...?
-Simon: ...?
-Oh...the shells...jellyfish cove is the place to go
-Lots of simple shells and jellyfish...wish they were yummy...
-Riley: Uh well...thanks!
-<<set $visitTwo = true>>
+<<set $visitOneSim = true>>
+    <<elseif $visitOneSim == true>>
+    Simon: Uhhhhhhhh...
+    Is it time for dinner yet?
+    Wah...who are you?
+    Riley: I'm Riley!
+    Simon: Hi Riley.../i/yaaaawnnnnnnn/i/ I'm Simon...do you need something?
+    Riley: I'm looking for simple shells! Do you know where I can find some?
+    Simon: Y'know I tried jellyfish once...didn't go well
+    ...my mouth was numb for days...
+    Riley: ...?
+    Simon: ...?
+    Oh...the shells...jellyfish cove is the place to go
+    Lots of simple shells and jellyfish...wish they were yummy...
+    Riley: Uh well...thanks!
+    <<set $visitTwoSim = true>>
 <<endif>>
-<<if $visitTwo == true>>
-Simon: /i/ Simple shells...jellyfish...heh...ow...not yummy/i/
-/i/Snoooooooreeeeeeeee/i/
+    <<if $visitTwoSim == true>>
+    Simon: <i>Simple shells...jellyfish...heh...ow...not yummy<i>
+    <i>Snoooooooreeeeeeeee<i>
 <<endif>>
 ===
 title:TheTwins
 position: 169,-313
 ---
+<<if $visitOneShrimp == true>>
 Angel: I swear I saw it!!
 Luis: Angel you gotta be shrimping me! I know you are lying! You ALWAYS lie!
 Angel: Please I swear!! I saw the mega shark!! With my own two eyes!!
 Hey you! You saw it didn't you?
 ->Uhhhh I haven't seen any sharks around here...
-    Luis: HAH! No one to vet your story now!
+    Luis:HAH! No one to vet your story now!
     Angel:Hmph...one day you'll believe me...
 -> Uh yeah! I saw it the other day!!
     Angel:See! I told you!
@@ -98,5 +111,14 @@ Angel: Oh the urchin cave! It has a tonnnnn of sanddollars!
 Luis: Well he isn't lying...but it's dangerous in there...
 The urchins are nice,but they've got the zoomies
 Just watch out and try not to get pricked!
-<<set $visitOne = true>>
+<<set $visitOneShrimp = true>>
+<<elseif $visitOneShrimp == true>>
+    Angel:Hey kid did you need any help?
+    Luis:Probably not from you...
+    Angel:Hey!
+     -> Sorry to interupt, but where can I find sandollars again?
+        Luis:Sorry about that! If you go to the Urchin cave you are sure to find some!
+        Angel:But be careful!!
+     -> Uh sorry nevermind!
+<<endif>>
 ===
