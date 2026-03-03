@@ -53,6 +53,11 @@ public class FollowPlayerControl : MonoBehaviour
         {
             LoadScene("3_Level");
         }
+
+        if(collision.gameObject.CompareTag("ToJelly"))
+        {
+            LoadScene("4_JellyFishJump");
+        }
         
     }
     public void LoadScene(string sceneName)
