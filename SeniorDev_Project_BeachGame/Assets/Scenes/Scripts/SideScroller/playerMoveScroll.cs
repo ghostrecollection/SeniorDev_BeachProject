@@ -20,7 +20,9 @@ public class playerMoveScroll : MonoBehaviour
 
     public float moveTime = 0.5f;
 
-    public bool doubleJump;
+    private const float JUMP_AMT = 10f;
+
+    //public bool doubleJump;
 
     //public float doubleJumpPower = 3f;
 
@@ -29,37 +31,24 @@ public class playerMoveScroll : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody>();
 
-        jump = new Vector3(0.0f, 5f, 0.0f);
-        
+        //jump = new Vector3(0.0f, 5f, 0.0f);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isGrounded && !Input.GetKey(KeyCode.Space))
+        //
+       float playerMove = Input.GetAxis("Horizontal");
+        ///
+       playerRB.linearVelocity = new Vector3(playerMove * speed, playerRB.linearVelocity.y, 0);
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
-            doubleJump = false;
+            Jump();
+            playerRB.AddForce(jump * JUMP_AMT, ForceMode.Impulse);
+            //isGrounded = false;
         }
-        float playerMove = Input.GetAxis("Horizontal");
-
-
-        playerRB.linearVelocity = new Vector3(playerMove * speed, playerRB.linearVelocity.y, 0);
-
-        if (Input.GetKey(KeyCode.Space) && isGrounded || doubleJump)
-        {
-            playerRB.AddForce(jump * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-
-            doubleJump = !doubleJump;
-
-
-        }
-        
-    }
-
-    public void OnCollisionEnter(Collision collision)
-    {
-       // if (collision.gameObject.CompareTag)
+        //
     }
 
     private void OnCollisionStay(Collision collision)
@@ -71,5 +60,9 @@ public class playerMoveScroll : MonoBehaviour
 
     {
         SceneManager.LoadScene(sceneName);
+    }
+    private void Jump()
+    {
+        playerRB.angularVelocity = Vector2.up * JUMP_AMT;
     }
 }

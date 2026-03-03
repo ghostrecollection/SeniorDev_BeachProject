@@ -727,12 +727,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::playerMoveScroll
   horizontalInput: 5
   speed: 5
-  jump: {x: 0, y: 3, z: 0}
-  jumpForce: 5
+  jump: {x: 0, y: 1, z: 0}
+  jumpForce: 1
   isGrounded: 0
   moveTime: 0.5
-  doubleJump: 0
-  doubleJumpPower: 3
 --- !u!1 &1132556758
 GameObject:
   m_ObjectHideFlags: 0
