@@ -10,6 +10,8 @@ public class NPC_Trigger : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             npcTrigger.Invoke();
+            
         }
     }
+   
 }
