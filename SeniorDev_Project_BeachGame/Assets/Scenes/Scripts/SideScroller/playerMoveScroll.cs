@@ -20,6 +20,10 @@ public class playerMoveScroll : MonoBehaviour
 
     public float moveTime = 0.5f;
 
+    public bool doubleJump;
+
+    //public float doubleJumpPower = 3f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,15 +36,23 @@ public class playerMoveScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isGrounded && !Input.GetKey(KeyCode.Space))
+        {
+            doubleJump = false;
+        }
         float playerMove = Input.GetAxis("Horizontal");
 
 
         playerRB.linearVelocity = new Vector3(playerMove * speed, playerRB.linearVelocity.y, 0);
 
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if (Input.GetKey(KeyCode.Space) && isGrounded || doubleJump)
         {
             playerRB.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
+
+            doubleJump = !doubleJump;
+
+
         }
         
     }

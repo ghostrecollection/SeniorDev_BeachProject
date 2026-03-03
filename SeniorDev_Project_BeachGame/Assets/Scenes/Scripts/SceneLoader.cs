@@ -4,7 +4,7 @@ using System.Collections;
 
 public class SceneLoader : MonoBehaviour
 {
-    //public static SceneLoader Insance;
+    public static SceneLoader Insance;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
