@@ -21,20 +21,14 @@ public class playerMoveScroll : MonoBehaviour
     public float moveTime = 0.5f;
 
     private const float JUMP_AMT = 10f;
-
-    //public bool doubleJump;
-
-    //public float doubleJumpPower = 3f;
-
+    //
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
-
-        //jump = new Vector3(0.0f, 5f, 0.0f);
-
-    }
-
+        
+    }//
+    //
     // Update is called once per frame
     void Update()
     {
