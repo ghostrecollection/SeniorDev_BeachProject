@@ -10,6 +10,9 @@ TagManager:
   - Octavia
   - ToJelly
   - SandCastle
+  - Spike
+  - ToUnderwater
+  - Enemy
   layers:
   - Default
   - TransparentFX
