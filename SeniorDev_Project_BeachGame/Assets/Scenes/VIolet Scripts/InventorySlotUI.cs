@@ -8,16 +8,32 @@ public class InventorySlotUI : MonoBehaviour
     public TMP_Text countText;
 
     private int count = 1;
+    private ItemSO currentItem;
 
     public void SetItem(ItemSO item)
     {
+        currentItem = item;
         iconImage.sprite = item.icon;
-        countText.text = $"x{count}";
+        count = 1;
+        UpdateText();
     }
 
     public void IncreaseCount()
     {
         count++;
-        countText.text = $"x{count}";
+        UpdateText();
+    }
+
+    void UpdateText()
+    {
+        if (count > 1)
+        {
+            countText.text = count.ToString();
+        }
+            
+        else
+        {
+            countText.text = "";
+        }
     }
 }

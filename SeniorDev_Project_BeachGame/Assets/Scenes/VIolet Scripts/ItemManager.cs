@@ -46,18 +46,9 @@ public class ItemManager : MonoBehaviour
             inventorySlots[item] = slotUI;
         }
     }
-
-    
-[YarnCommand("GetShellCount")]
-public int GetShellCount(string itemName)
-    {
-        if(itemName == "shell")
-            return shellCount;
-        return 0;
-       
-    }
 }
 
+    
     
     
     
