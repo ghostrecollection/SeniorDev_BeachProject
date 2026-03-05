@@ -89,10 +89,10 @@ Guh...2 more minutes...
     <i>Snoooooooreeeeeeeee<i>
 <<endif>>
 ===
-title:TheTwins
+title:Twins
 position: 169,-313
 ---
-<<if $visitOneShrimp == true>>
+<<if $visitOneShrimp == false>>
 Angel: I swear I saw it!!
 Luis: Angel you gotta be shrimping me! I know you are lying! You ALWAYS lie!
 Angel: Please I swear!! I saw the mega shark!! With my own two eyes!!

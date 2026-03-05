@@ -20,46 +20,37 @@ public class playerMoveScroll : MonoBehaviour
 
     public float moveTime = 0.5f;
 
-    public bool doubleJump;
-
-    //public float doubleJumpPower = 3f;
-
+    private const float JUMP_AMT = 10f;
+    //
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
-
-        jump = new Vector3(0.0f, 5f, 0.0f);
         
-    }
-
+    }//
+    //
     // Update is called once per frame
     void Update()
     {
-        if (isGrounded && !Input.GetKey(KeyCode.Space))
+        //
+       float playerMove = Input.GetAxis("Horizontal");
+        ///
+       playerRB.linearVelocity = new Vector3(playerMove * speed, playerRB.linearVelocity.y, 0);
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            doubleJump = false;
+            Jump();
+            playerRB.AddForce(jump * JUMP_AMT, ForceMode.Impulse);
+            //isGrounded = false;
         }
-        float playerMove = Input.GetAxis("Horizontal");
-
-
-        playerRB.linearVelocity = new Vector3(playerMove * speed, playerRB.linearVelocity.y, 0);
-
-        if (Input.GetKey(KeyCode.Space) && isGrounded || doubleJump)
-        {
-            playerRB.AddForce(jump * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-
-            doubleJump = !doubleJump;
-
-
-        }
-        
+        //
     }
 
-    public void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-       // if (collision.gameObject.CompareTag)
+        if(collision.gameObject.CompareTag("ToUnderwater"))
+        {
+            LoadScene("2_Underwater");
+        }
     }
 
     private void OnCollisionStay(Collision collision)
@@ -72,4 +63,10 @@ public class playerMoveScroll : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    private void Jump()
+    {
+        playerRB.angularVelocity = Vector2.up * JUMP_AMT;
+    }
+
+
 }
