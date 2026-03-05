@@ -42,6 +42,7 @@ Riley: No challenge is too tough for me hehe!!
 But actually...how many shells do I need to get?
 Octavia: Oh of course! I need 25 simple shells, 15 sanddollars, and 5 special shells!
 I hope thats not too much! I'm counting on you <3
+There's a pipe that leads to an old shipwreck! That would be a good place to start, but be careful!
 <<set $visitOneOct = true>>
     <<elseif $visitOneOct == true>>
      Octavia: Oh hello little one! Did you have a question?
@@ -80,8 +81,11 @@ Guh...2 more minutes...
     Riley: ...?
     Simon: ...?
     Oh...the shells...jellyfish cove is the place to go
+    ...there's an old pipe leading to it near Hugo's place
     Lots of simple shells and jellyfish...wish they were yummy...
     Riley: Uh well...thanks!
+    <<if $levelsCompleted >= 1>>
+     <<endif>>
     <<set $visitTwoSim = true>>
 <<endif>>
     <<if $visitTwoSim == true>>
@@ -109,6 +113,8 @@ Angel: Oh the urchin cave! It has a tonnnnn of sanddollars!
 Luis: Well he isn't lying...but it's dangerous in there...
 The urchins are nice,but they've got the zoomies
 Just watch out and try not to get pricked!
+<<if $levelsCompleted >= 2>>
+    <<endif>>
 <<set $visitOneShrimp = true>>
 <<elseif $visitOneShrimp == true>>
     Angel:Hey kid did you need any help?
