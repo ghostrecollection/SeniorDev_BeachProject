@@ -10,6 +10,7 @@ TagManager:
   - ToJelly
   - ToUnderwater
   - Spike
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ public class ResetLocation : MonoBehaviour
 {
     private Transform transformPlayer;
 
-    public GameObject respawnPos;
+    public Transform respawnPos;
     //public float moveTime = 20f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,11 +22,11 @@ public class ResetLocation : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        /*if(collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("Enemy"))
         {
             Respawn();
 
-        }*/
+        }
 
         if(collision.gameObject.CompareTag("Spike"))
         {
