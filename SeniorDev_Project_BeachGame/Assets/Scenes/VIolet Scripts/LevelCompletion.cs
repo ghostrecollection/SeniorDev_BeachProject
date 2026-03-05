@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 public class LevelCompletion : MonoBehaviour
 {
+    
     public string returnScene;
 
     private void OnTriggerEnter(Collider other)
@@ -13,4 +15,7 @@ public class LevelCompletion : MonoBehaviour
             SceneManager.LoadScene(returnScene);
         }
     }
+
+
+
 }

@@ -1,10 +1,13 @@
 using UnityEngine;
+using Yarn.Unity;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
 
     public int currentLevel = 0;
+
+    public VariableStorageBehaviour variableStorage;
 
     void Awake()
     {
@@ -21,6 +24,10 @@ public class LevelManager : MonoBehaviour
     public void AdvanceLevel()
     {
         currentLevel++;
-        Debug.Log("Level advanced to: " + currentLevel);
+        if (variableStorage != null)
+        {
+            variableStorage.SetValue("$levelsCompleted", currentLevel);
+        }
+
     }
 }
