@@ -574,7 +574,7 @@ Transform:
   m_GameObject: {fileID: 410255267}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.9, y: -32.1, z: 12.99}
+  m_LocalPosition: {x: -49.95, y: -44.66, z: 12.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1581,10 +1581,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a453295c86cbb04c9a06a5069f541b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerMoveScroll
-  horizontalInput: 5
+  horizontalInput: 2
   speed: 5
-  jump: {x: 0, y: 1, z: 0}
-  jumpForce: 0.5
+  jump: {x: 0, y: 0.5, z: 0}
+  jumpForce: 0.3
   isGrounded: 0
   moveTime: 0.5
 --- !u!1 &1132556758
@@ -1881,7 +1881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2146,11 +2146,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1474444947911839873, guid: 5a569e2b9088948d190e5276bd80354e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 44.913696
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1474444947911839873, guid: 5a569e2b9088948d190e5276bd80354e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44.88925
+      value: 145
       objectReference: {fileID: 0}
     - target: {fileID: 1474444947911839873, guid: 5a569e2b9088948d190e5276bd80354e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
