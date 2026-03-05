@@ -6,9 +6,10 @@ TagManager:
   tags:
   - Ground
   - ToLevel
-  - ToSea
   - Octavia
   - ToJelly
+  - ToUnderwater
+  - Spike
   layers:
   - Default
   - TransparentFX

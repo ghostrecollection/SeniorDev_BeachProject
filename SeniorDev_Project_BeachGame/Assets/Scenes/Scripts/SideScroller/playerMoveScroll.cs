@@ -45,6 +45,14 @@ public class playerMoveScroll : MonoBehaviour
         //
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("ToUnderwater"))
+        {
+            LoadScene("2_Underwater");
+        }
+    }
+
     private void OnCollisionStay(Collision collision)
     {
         isGrounded = true;
@@ -59,4 +67,6 @@ public class playerMoveScroll : MonoBehaviour
     {
         playerRB.angularVelocity = Vector2.up * JUMP_AMT;
     }
+
+
 }
