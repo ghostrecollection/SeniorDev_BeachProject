@@ -36,7 +36,7 @@ public class playerMoveScroll : MonoBehaviour
        float playerMove = Input.GetAxis("Horizontal");
         ///
        playerRB.linearVelocity = new Vector3(playerMove * speed, playerRB.linearVelocity.y, 0);
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Jump();
             playerRB.AddForce(jump * JUMP_AMT, ForceMode.Impulse);
