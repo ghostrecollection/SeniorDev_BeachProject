@@ -16,12 +16,14 @@ public class FollowPlayerControl : MonoBehaviour
 
     public bool isGrounded;
 
-
+    //ANIMATION
+    public Animator anim;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        jump = new Vector3(0.0f, 0.5f, 0.0f);
+        jump = new Vector3(0.0f, 0.75f, 0.0f);
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class FollowPlayerControl : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) && isGrounded )
         {
             fplayerRB.AddForce(jump * jumpForce, ForceMode.Impulse);
+            anim.Play("Jump");
             isGrounded = false;
         }
     }
