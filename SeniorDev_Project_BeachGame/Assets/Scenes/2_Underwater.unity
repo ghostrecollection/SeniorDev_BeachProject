@@ -6879,7 +6879,7 @@ MonoBehaviour:
     m_Bits: 64
   groundCheck: {fileID: 9464976}
   anim: {fileID: 1216851919}
-  smoothingSpeed: 2
+  smoothingSpeed: 3
 --- !u!114 &495274297
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -40,7 +40,7 @@ public class FollowPlayerControl : MonoBehaviour
     float walkTarget = 0.5f;
     float sprintTarget = 1;
     // Controls how fast the transition happens
-    public float smoothingSpeed = 1f;
+    public float smoothingSpeed = 3f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -132,7 +132,7 @@ public class FollowPlayerControl : MonoBehaviour
             // ADD Play Idle anim.
         }
 
-        // Smooth animation transition using lerp
+        // Smooth animation transition using lerp.
         float currentAnimSpeed = anim.GetFloat("Speed");
         float smoothedSpeed = Mathf.Lerp(currentAnimSpeed, targetAnimSpeed, Time.deltaTime * smoothingSpeed);
         anim.SetFloat("Speed", smoothedSpeed);
