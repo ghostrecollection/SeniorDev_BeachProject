@@ -157,16 +157,16 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.1
   contrast:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 5
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 0.8066038, g: 0.8908794, b: 1, a: 1}
+    m_Value: {r: 0.87375396, g: 0.8726415, b: 1, a: 1}
   hueShift:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   saturation:
     m_OverrideState: 1
     m_Value: 0
@@ -623,8 +623,8 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0.26019186
           value: 0.6060606
-          inSlope: -0.6340824
-          outSlope: -0.6340824
+          inSlope: 2.9219434
+          outSlope: 2.9219434
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
