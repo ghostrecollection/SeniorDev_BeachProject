@@ -144,18 +144,36 @@ public class FollowPlayerControl : MonoBehaviour
     }
 
 
-    public void OnCollisionEnter(Collision collision)
+    /*public void OnCollisionEnter(Collision collision)
+      {
+          if (collision.gameObject.CompareTag("ToLevel"))
+          {
+              LoadScene("3_Level");
+          }
+
+          if(collision.gameObject.CompareTag("ToJelly"))
+          {
+              LoadScene("4_JellyFishJump");
+          }
+
+      }*/
+
+    public void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("ToLevel"))
+        if(other.gameObject.CompareTag("ToLevel"))
         {
             LoadScene("3_Level");
         }
 
-        if(collision.gameObject.CompareTag("ToJelly"))
+        if (other.gameObject.CompareTag("ToJelly"))
         {
             LoadScene("4_JellyFishJump");
         }
-        
+
+        if(other.gameObject.CompareTag("ToUrchin"))
+        {
+            LoadScene("5_UrchinCave");
+        }
     }
     public void LoadScene(string sceneName)
 

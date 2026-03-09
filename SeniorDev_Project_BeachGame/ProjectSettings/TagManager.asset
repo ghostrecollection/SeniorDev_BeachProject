@@ -13,6 +13,7 @@ TagManager:
   - Spike
   - ToUnderwater
   - Enemy
+  - ToUrchin
   layers:
   - Default
   - TransparentFX
