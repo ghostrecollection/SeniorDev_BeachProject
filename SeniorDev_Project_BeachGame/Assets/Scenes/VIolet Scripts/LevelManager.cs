@@ -26,8 +26,9 @@ public class LevelManager : MonoBehaviour
         currentLevel++;
         if (variableStorage != null)
         {
-            variableStorage.SetValue("$levelsCompleted", currentLevel);
+            variableStorage.SetValue("$levelsCompleted", currentLevel); 
         }
-
+        
     }
+
 }

@@ -28,7 +28,7 @@ public class InventorySlotUI : MonoBehaviour
     {
         if (count > 1)
         {
-            countText.text = count.ToString();
+            countText.text = "x" + count.ToString();
         }
             
         else
