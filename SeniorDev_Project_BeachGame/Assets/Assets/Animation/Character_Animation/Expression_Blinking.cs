@@ -11,11 +11,15 @@ public class Expression_Blinking : MonoBehaviour
     [SerializeField] public Texture2D idle, blink;
 
     // Variables for how long to wait between switching the expression texture.
-    [SerializeField] public float preBlink = 3f, postBlink = .5f;
+    [SerializeField] public float preBlink = 2.25f, postBlink = .5f;
 
     public bool canBlink = true;
-    
 
+    private void Start()
+    {
+        // Ensuring facial expression starts with eyes open.
+        idleExpression.mainTexture = idle;
+    }
     private void Update()
     {
         if (canBlink)
