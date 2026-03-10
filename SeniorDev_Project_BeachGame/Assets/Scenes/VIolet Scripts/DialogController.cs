@@ -8,15 +8,14 @@ public class DialogController : MonoBehaviour
     public FollowPlayerControl playerMovement;
 
     public InputManager inputManager;
-    //public PlayerInput pInput;
-    public InputAction inputAction;
+    public PlayerInput pInput;
+    //public InputAction inputAction;
 
     void Start()
     {
         inputManager = GetComponentInParent<InputManager>();
-
+        playerMovement = GetComponentInParent<FollowPlayerControl>();
         
-
         PlayerInput pInput = GetComponent<PlayerInput>();
     }
 
@@ -36,10 +35,12 @@ public class DialogController : MonoBehaviour
     {
         GameStateManager.instance.SetState(GameState.gameState.TALKING);
 
-        if (playerMovement != null) playerMovement.enabled = false;
-        //if (pInput != null) pInput.enabled = false;
+        //if (playerMovement != null) playerMovement.enabled = false;
+        if(inputManager!= null) inputManager.enabled = false;
+        if (pInput != null) pInput.enabled = false;
         inputManager.move = new Vector2(0,0);
-        inputManager.jump = true; 
+        playerMovement.jumpForce = 0;
+        //playerMovement.targetAnimSpeed = playerMovement.walkTarget;
 
 
     }
@@ -48,11 +49,12 @@ public class DialogController : MonoBehaviour
     {
         GameStateManager.instance.SetState(GameState.gameState.WALKING);
 
-        if (playerMovement != null) playerMovement.enabled = true;
-       // if (pInput != null) pInput.enabled = true;
+        //if (playerMovement != null) playerMovement.enabled = true;
+       if (pInput != null) pInput.enabled = true;
+       if(inputManager!= null) inputManager.enabled = true;
 
-        inputManager.move = new Vector2(0,0);
-        inputManager.jump = false; 
+        //inputManager.move = new Vector2(0,0);
+        playerMovement.jumpForce = 7; 
 
 
 

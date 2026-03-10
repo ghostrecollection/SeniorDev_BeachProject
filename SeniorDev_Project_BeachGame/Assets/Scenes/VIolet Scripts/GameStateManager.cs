@@ -4,9 +4,11 @@ using UnityEngine.InputSystem;
 public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager instance;
-    public InputManager playerMovement;
+    public InputManager inputManager;
     public  FollowPlayerControl playerFollow;
     public PlayerInput pInput;
+
+
     public GameState CurrentState = new GameState();
     void Awake()
     {
@@ -20,7 +22,7 @@ public class GameStateManager : MonoBehaviour
             return;
         }
 
-        playerMovement = FindFirstObjectByType<InputManager>();
+        inputManager = FindFirstObjectByType<InputManager>();
 
         playerFollow = FindFirstObjectByType<FollowPlayerControl>();
         
@@ -32,13 +34,13 @@ public class GameStateManager : MonoBehaviour
     {
         CurrentState.State = newState;
 
-        if (playerMovement != null)
+        if (inputManager != null)
         {
-            playerMovement.enabled = (newState == GameState.gameState.WALKING);
+            inputManager.enabled = (newState == GameState.gameState.WALKING);
         }
         if (playerFollow != null)
         {
-            playerFollow.enabled = (newState == GameState.gameState.WALKING);
+            //playerFollow.enabled = (newState == GameState.gameState.WALKING);
         }
         if (pInput != null)
         {
