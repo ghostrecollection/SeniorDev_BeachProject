@@ -38,12 +38,7 @@ public class gameStateController : MonoBehaviour
             case "TALKING":
                 gState.State = GameState.gameState.TALKING;
                 break;
-            case "CASTLE":
-                gState.State = GameState.gameState.CASTLE;
-                break;
-             case "MENU":
-                gState.State = GameState.gameState.MENU;
-                break;
+        
         }
         foreach (IGameStateManager stateObjs in stateObjs)
         {

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+
 public class SandCastleManager : MonoBehaviour
 {
     public List<GameObject> sandCastleStages; 
@@ -19,4 +20,5 @@ public class SandCastleManager : MonoBehaviour
             sandCastleStages[i].SetActive(i == progress);
         }
     }
+    
 }

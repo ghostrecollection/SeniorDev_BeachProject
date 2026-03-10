@@ -4,12 +4,12 @@ using UnityEngine.InputSystem;
 public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager instance;
-
-    public FollowPlayerControl playerMovement;
+    public InputManager inputManager;
+    public  FollowPlayerControl playerFollow;
     public PlayerInput pInput;
-    public Animator playerAnimator;
-    public GameState CurrentState = new GameState();
 
+
+    public GameState CurrentState = new GameState();
     void Awake()
     {
         if (instance == null)
@@ -22,26 +22,30 @@ public class GameStateManager : MonoBehaviour
             return;
         }
 
-        playerMovement = FindFirstObjectByType<FollowPlayerControl>();
+        inputManager = FindFirstObjectByType<InputManager>();
+
+        playerFollow = FindFirstObjectByType<FollowPlayerControl>();
+        
         pInput = GetComponent<PlayerInput>();
-        playerAnimator = FindFirstObjectByType<Animator>();
+        
     }
 
     public void SetState(GameState.gameState newState)
     {
         CurrentState.State = newState;
 
-        if (playerMovement != null)
+        if (inputManager != null)
         {
-            playerMovement.enabled = (newState == GameState.gameState.WALKING);
+            inputManager.enabled = (newState == GameState.gameState.WALKING);
+        }
+        if (playerFollow != null)
+        {
+            //playerFollow.enabled = (newState == GameState.gameState.WALKING);
         }
         if (pInput != null)
         {
             pInput.enabled = (newState == GameState.gameState.WALKING);
         }
-        if (playerAnimator != null)
-    {
-        playerAnimator.enabled = (newState == GameState.gameState.WALKING);
-    }
+        
     }
 }

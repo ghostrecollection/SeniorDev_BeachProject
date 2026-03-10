@@ -7,28 +7,36 @@ public class InventorySlotUI : MonoBehaviour
     public Image iconImage;
     public TMP_Text countText;
 
-    private int count = 1;
+    private int shellCount = 1;
     private ItemSO currentItem;
+
+  
 
     public void SetItem(ItemSO item)
     {
         currentItem = item;
         iconImage.sprite = item.icon;
-        count = 1;
+        shellCount = 1;
         UpdateText();
     }
 
     public void IncreaseCount()
     {
-        count++;
+        shellCount++;
         UpdateText();
+
+         if (currentItem != null && currentItem.itemName == "Shell" && LevelManager.instance != null)
+        {
+            LevelManager.instance.SetShellCount(shellCount);
+        }
+        
     }
 
     void UpdateText()
     {
-        if (count > 1)
+        if (shellCount > 1)
         {
-            countText.text = "x" + count.ToString();
+            countText.text = "x" + shellCount.ToString();
         }
             
         else
@@ -36,4 +44,5 @@ public class InventorySlotUI : MonoBehaviour
             countText.text = "";
         }
     }
+  
 }

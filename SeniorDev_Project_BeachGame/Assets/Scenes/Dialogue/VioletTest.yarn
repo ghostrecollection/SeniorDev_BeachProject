@@ -1,0 +1,10 @@
+﻿title: VioletTest
+---
+<<declare $shellCount = 0>>
+===
+
+title: ShellTest
+---
+You collected {$shellCount} shells.
+===
+
