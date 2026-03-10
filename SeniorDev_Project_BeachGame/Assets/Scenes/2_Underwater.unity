@@ -268,7 +268,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogController
   dialogueRunner: {fileID: 1212223574}
-  playerAnimator: {fileID: 222772150}
+  playerMovement: {fileID: 495274296}
+  inputManager: {fileID: 495274297}
+  pInput: {fileID: 495274298}
 --- !u!1001 &52130656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6370,7 +6372,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -11042,9 +11044,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1983793649}
-  - {fileID: 770647200}
   - {fileID: 1535887895}
+  - {fileID: 770647200}
+  - {fileID: 1983793649}
   - {fileID: 1567333568}
   m_Father: {fileID: 1927991640}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12944,15 +12946,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9b314cafdae2ce24d9bc1613f12d00b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.98
+      value: 12.97
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9b314cafdae2ce24d9bc1613f12d00b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9b314cafdae2ce24d9bc1613f12d00b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.87
+      value: -15.84
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9b314cafdae2ce24d9bc1613f12d00b7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13526,7 +13528,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -14049,9 +14051,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ef77efda9784ee99202c79ac4325ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
-  playerMovement: {fileID: 495274296}
+  inputManager: {fileID: 0}
+  playerFollow: {fileID: 0}
   pInput: {fileID: 495274298}
-  playerAnimator: {fileID: 222772150}
 --- !u!4 &1428981681
 Transform:
   m_ObjectHideFlags: 0
