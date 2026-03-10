@@ -6,8 +6,8 @@ public class LevelManager : MonoBehaviour
     public static LevelManager instance;
 
     public int currentLevel = 0;
-
-    public VariableStorageBehaviour variableStorage;
+    
+    public int shellCount;
 
     void Awake()
     {
@@ -21,14 +21,17 @@ public class LevelManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+     public void SetShellCount(int amount)
+    {
+        shellCount = amount;
+
+    }
+
     public void AdvanceLevel()
     {
         currentLevel++;
-        if (variableStorage != null)
-        {
-            variableStorage.SetValue("$levelsCompleted", currentLevel); 
-        }
         
     }
+    
 
 }

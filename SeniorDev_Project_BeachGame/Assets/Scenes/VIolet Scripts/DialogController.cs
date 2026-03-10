@@ -6,8 +6,19 @@ public class DialogController : MonoBehaviour
 {
     public DialogueRunner dialogueRunner;
     public FollowPlayerControl playerMovement;
-    public PlayerInput pInput;
-    public Animator playerAnimator;
+
+    public InputManager inputManager;
+    //public PlayerInput pInput;
+    public InputAction inputAction;
+
+    void Start()
+    {
+        inputManager = GetComponentInParent<InputManager>();
+
+        
+
+        PlayerInput pInput = GetComponent<PlayerInput>();
+    }
 
     private void OnEnable()
     {
@@ -26,8 +37,11 @@ public class DialogController : MonoBehaviour
         GameStateManager.instance.SetState(GameState.gameState.TALKING);
 
         if (playerMovement != null) playerMovement.enabled = false;
-        if (pInput != null) pInput.enabled = false;
-        if (playerAnimator != null) playerAnimator.enabled = false;
+        //if (pInput != null) pInput.enabled = false;
+        inputManager.move = new Vector2(0,0);
+        inputManager.jump = true; 
+
+
     }
 
     private void OnDialogueEnd()
@@ -35,7 +49,12 @@ public class DialogController : MonoBehaviour
         GameStateManager.instance.SetState(GameState.gameState.WALKING);
 
         if (playerMovement != null) playerMovement.enabled = true;
-        if (pInput != null) pInput.enabled = true;
-        if (playerAnimator != null) playerAnimator.enabled = true;
+       // if (pInput != null) pInput.enabled = true;
+
+        inputManager.move = new Vector2(0,0);
+        inputManager.jump = false; 
+
+
+
     }
 }
