@@ -1369,7 +1369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09426b69a0c2b9847abbb033cd0aacbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  speed: 7
+  speed: 5
   startPoint: 0
   points:
   - {fileID: 989791}
@@ -17553,7 +17553,7 @@ Transform:
   m_GameObject: {fileID: 884629685}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.6, y: 42.98, z: -7.3}
+  m_LocalPosition: {x: 48.6, y: 43.1, z: -7.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
