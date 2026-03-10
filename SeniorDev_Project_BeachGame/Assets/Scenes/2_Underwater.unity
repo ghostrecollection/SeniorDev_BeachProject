@@ -268,7 +268,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogController
   dialogueRunner: {fileID: 1212223574}
-  playerAnimator: {fileID: 222772150}
+  playerMovement: {fileID: 0}
+  inputManager: {fileID: 0}
+  pInput: {fileID: 0}
 --- !u!1001 &52130656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13280,7 +13282,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: autoStart
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: startNode
+      value: UnderwaterDia
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -14049,9 +14055,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ef77efda9784ee99202c79ac4325ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
-  playerMovement: {fileID: 495274296}
+  inputManager: {fileID: 0}
+  playerFollow: {fileID: 0}
   pInput: {fileID: 495274298}
-  playerAnimator: {fileID: 222772150}
 --- !u!4 &1428981681
 Transform:
   m_ObjectHideFlags: 0
