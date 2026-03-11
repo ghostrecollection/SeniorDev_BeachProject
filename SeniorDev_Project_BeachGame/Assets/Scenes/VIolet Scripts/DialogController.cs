@@ -16,7 +16,7 @@ public class DialogController : MonoBehaviour
         inputManager = GetComponentInParent<InputManager>();
         playerMovement = GetComponentInParent<FollowPlayerControl>();
         
-        PlayerInput pInput = GetComponent<PlayerInput>();
+        pInput = GetComponentInParent<PlayerInput>();
     }
 
     private void OnEnable()
@@ -50,10 +50,10 @@ public class DialogController : MonoBehaviour
         GameStateManager.instance.SetState(GameState.gameState.WALKING);
 
         //if (playerMovement != null) playerMovement.enabled = true;
-       if (pInput != null) pInput.enabled = true;
-       if(inputManager!= null) inputManager.enabled = true;
+        if (pInput != null) pInput.enabled = true;
+        if(inputManager!= null) inputManager.enabled = true;
 
-        //inputManager.move = new Vector2(0,0);
+        
         playerMovement.jumpForce = 7; 
 
 
