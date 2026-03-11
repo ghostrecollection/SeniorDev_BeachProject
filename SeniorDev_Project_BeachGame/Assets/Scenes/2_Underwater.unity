@@ -11360,6 +11360,7 @@ Transform:
   - {fileID: 368263755}
   - {fileID: 625889193}
   - {fileID: 1739517463}
+  - {fileID: 2089485686}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &974423779
@@ -12905,7 +12906,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: autoStart
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: startNode
+      value: UnderwaterDia
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -27473,7 +27478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089485685}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -27482,7 +27487,7 @@ Transform:
   - {fileID: 1030195301}
   - {fileID: 1855564078}
   - {fileID: 1662379225}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 972900355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2134370762
 PrefabInstance:
@@ -27945,7 +27950,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 972900355}
-  - {fileID: 2089485686}
   - {fileID: 597980974}
   - {fileID: 1045937576}
   - {fileID: 4196707958782505200}

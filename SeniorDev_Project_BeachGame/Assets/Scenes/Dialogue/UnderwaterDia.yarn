@@ -20,19 +20,22 @@ title: UnderwaterDia
 position: -377,-73
 ---
 Riley: Ugh...what happened...where am I...
-A...a KINGDOM????
+Is that...a castle...<i>more like a mound of sand<i>
+Octavia: <i>WAAAAAAAAAAAAAAAAAAAAAAAAAAA<i>
+Riley: Ah! Why is that little pink thing crying??
 ===
 title:Octavia
 position: -108,-317
 ---
 <<if $visitOneOct == false>>
-Octavia: KYAAAAAAAAAAAAA!!!!
-Please anyone help me please!!!
+Octavia:<i>sniffle sniffle<i> 
+Who's there?
 You there! Won't you help me please???
 Wait...are you...
 Nevermind that I NEED HELP!!! My home...my poor beautiful amazing fantabulous home...
 IS DESTROYED!!!!
-Please little one...it took me DAYS to gather all the right shells for my home
+Please little one...
+...IT TOOK ME DAYS...<i>ahem<i>...to gather all the right shells for my home
 and now they are CRUSHED... WAHHHHHHH
 ...
 please...won't you help me?
