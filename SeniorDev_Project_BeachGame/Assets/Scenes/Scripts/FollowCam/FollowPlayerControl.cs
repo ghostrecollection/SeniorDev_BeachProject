@@ -36,9 +36,9 @@ public class FollowPlayerControl : MonoBehaviour
     //ANIMATION
     public Animator anim;
     // Target floats to switch between animations in blend tree
-    float idleTarget = 0;
-    float walkTarget = 0.5f;
-    float sprintTarget = 1;
+    public static float idleTarget = 0;
+    public static float walkTarget = 0.5f;
+    public static float sprintTarget = 1;
     // Controls how fast the transition happens
     public float smoothingSpeed = 3f;
 

@@ -1,20 +1,19 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LevelCompletion : MonoBehaviour
 {
-    
-    public string mainScene;
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            LevelManager.instance.AdvanceLevel();
-            SceneManager.LoadScene(mainScene);
+            if (LevelManager.instance != null)
+            {
+                LevelManager.instance.AdvanceLevel();
+            }
+            else
+            {
+                Debug.LogError("LevelManager instance is NULL!");
+            }
         }
     }
-
-
-
 }

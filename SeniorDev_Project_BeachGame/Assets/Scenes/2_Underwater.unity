@@ -268,7 +268,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogController
   dialogueRunner: {fileID: 1212223574}
-  playerAnimator: {fileID: 222772150}
+  playerMovement: {fileID: 495274296}
+  inputManager: {fileID: 495274297}
+  pInput: {fileID: 495274298}
 --- !u!1001 &52130656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14049,9 +14051,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ef77efda9784ee99202c79ac4325ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
-  playerMovement: {fileID: 495274296}
+  inputManager: {fileID: 0}
+  playerFollow: {fileID: 0}
   pInput: {fileID: 495274298}
-  playerAnimator: {fileID: 222772150}
 --- !u!4 &1428981681
 Transform:
   m_ObjectHideFlags: 0
