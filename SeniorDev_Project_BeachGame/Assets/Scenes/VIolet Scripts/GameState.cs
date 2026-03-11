@@ -6,8 +6,6 @@ public class GameState
     {
         WALKING,
         TALKING,
-        CASTLE,
-        MENU
     }
 
     public gameState State;

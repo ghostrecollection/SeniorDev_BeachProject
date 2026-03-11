@@ -6,6 +6,8 @@ position: -357,-312
 <<declare $visitTwoOct = false>>
 <<declare $allShellsCollected = false>>
 
+<<declare $currentLevel = 0 >>
+
 //Simon
 <<declare $visitOneSim = false>>
 <<declare $visitTwoSim = false>>
@@ -19,10 +21,13 @@ position: -357,-312
 title: UnderwaterDia
 position: -377,-73
 ---
-Riley: Ugh...what happened...where am I...
-Is that...a castle...<i>more like a mound of sand<i>
-Octavia: <i>WAAAAAAAAAAAAAAAAAAAAAAAAAAA<i>
-Riley: Ah! Why is that little pink thing crying??
+<<if $currentLevel < 1 >>
+
+    Riley: Ugh...what happened...where am I...
+    Is that...a castle...<i>more like a mound of sand<i>
+    Octavia: <i>WAAAAAAAAAAAAAAAAAAAAAAAAAAA<i>
+    Riley: Ah! Why is that little pink thing crying??
+<<endif>>
 ===
 title:Octavia
 position: -108,-317

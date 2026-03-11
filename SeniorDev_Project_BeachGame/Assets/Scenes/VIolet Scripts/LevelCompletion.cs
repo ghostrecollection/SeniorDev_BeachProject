@@ -12,7 +12,7 @@ public class LevelCompletion : MonoBehaviour
             }
             else
             {
-                Debug.LogError("LevelManager instance is NULL!");
+                Debug.Log("LevelManager instance is Null");
             }
         }
     }

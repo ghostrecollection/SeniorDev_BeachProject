@@ -5,10 +5,13 @@ public class YarnUpdater : MonoBehaviour
 {
      public VariableStorageBehaviour variableStorage;
      private int shellCount;
+    private int currentLevel;
+
 
     void Start()
     {
         UpdateShells();
+        UpdateLvl();
     }
 
     public void UpdateShells()
@@ -20,9 +23,16 @@ public class YarnUpdater : MonoBehaviour
                 variableStorage.SetValue("$shellCount", shellCount);
 
             }
-
-
-       
     
     }
+    public void UpdateLvl()
+    {
+        int currentLevel = LevelManager.instance.currentLevel;
+        if (variableStorage != null)
+            {
+                variableStorage.SetValue("$currentLevel", currentLevel);
+
+            }
+    }
+
 }

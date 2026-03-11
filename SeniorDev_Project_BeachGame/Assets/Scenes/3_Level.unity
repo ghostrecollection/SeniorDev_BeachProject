@@ -37523,7 +37523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerViolet
   sceneToLoad: 2_Underwater
-  transitionAnim: {fileID: 0}
+  transitionAnim: {fileID: 567938077}
 --- !u!1 &2123445241
 GameObject:
   m_ObjectHideFlags: 0
