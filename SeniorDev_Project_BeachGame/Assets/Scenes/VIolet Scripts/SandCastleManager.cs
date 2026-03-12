@@ -7,25 +7,24 @@ public class SandCastleManager : MonoBehaviour
     public VariableStorageBehaviour variableStorage;
     public List<GameObject> sandCastleStages; 
 
-    private int currentLevel;
+    private int progress;
 
     void Start()
     {
         UpdateCastle();
-
-        //UpdateLvl();
     }
-
     public void UpdateCastle()
     {
-        int currentLevel = LevelManager.instance.currentLevel;
+        int progress = LevelManager.instance.currentLevel;
 
         for (int i = 0; i < sandCastleStages.Count; i++)
         {
-            sandCastleStages[i].SetActive(i == currentLevel);
+            sandCastleStages[i].SetActive(i == progress);  
         }
-        
-    }
 
-    
+        if (variableStorage != null)
+        {
+            variableStorage.SetValue("$castleLevel", progress);
+        }
+    }  
 }

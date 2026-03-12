@@ -3,36 +3,31 @@ using Yarn.Unity;
 
 public class YarnUpdater : MonoBehaviour
 {
-     public VariableStorageBehaviour variableStorage;
-     private int shellCount;
-    private int currentLevel;
-
+    public VariableStorageBehaviour variableStorage;
 
     void Start()
     {
         UpdateShells();
-        UpdateLvl();
+        LvlCount();
     }
 
     public void UpdateShells()
     {
-         int shellCount = LevelManager.instance.shellCount;
+        int shellCount = LevelManager.instance.shellCount;
 
         if (variableStorage != null)
-            {
-                variableStorage.SetValue("$shellCount", shellCount);
-
-            }
-    
+        {
+            variableStorage.SetValue("$shellCount", shellCount);
+        }
     }
-    public void UpdateLvl()
+
+    public void LvlCount()
     {
         int currentLevel = LevelManager.instance.currentLevel;
+
         if (variableStorage != null)
-            {
-                variableStorage.SetValue("$currentLevel", currentLevel);
-
-            }
+        {
+            variableStorage.SetValue("$currentLevel", currentLevel);
+        }
     }
-
 }

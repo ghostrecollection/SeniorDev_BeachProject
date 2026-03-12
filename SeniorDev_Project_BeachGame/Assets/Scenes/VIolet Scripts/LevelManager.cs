@@ -4,8 +4,9 @@ using Yarn.Unity;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
+    public VariableStorageBehaviour variableStorage;
 
-    public int currentLevel = 0;
+    public int currentLevel;
     
     public int shellCount;
 
@@ -30,7 +31,6 @@ public class LevelManager : MonoBehaviour
     public void AdvanceLevel()
     {
         currentLevel++;
-    }
-    
+    }  
 
 }

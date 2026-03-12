@@ -1,6 +1,6 @@
 ﻿title: VioletTest
 ---
-<<declare $shellCount = 0>>
+<<declare $castleLevel = 0 >>
 ===
 
 title: ShellTest

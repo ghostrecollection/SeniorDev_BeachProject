@@ -6,7 +6,9 @@ position: -357,-312
 <<declare $visitTwoOct = false>>
 <<declare $allShellsCollected = false>>
 
-<<declare $currentLevel = 0 >>
+<<declare $castleLevel = 0 >>
+<<declare $shellCount = 0 >>
+
 
 //Simon
 <<declare $visitOneSim = false>>
@@ -21,13 +23,17 @@ position: -357,-312
 title: UnderwaterDia
 position: -377,-73
 ---
-<<if $currentLevel < 1 >>
+//You are on Level {$castleLevel}
+//You have {$shellCount} Shells
 
-    Riley: Ugh...what happened...where am I...
-    Is that...a castle...<i>more like a mound of sand<i>
-    Octavia: <i>WAAAAAAAAAAAAAAAAAAAAAAAAAAA<i>
-    Riley: Ah! Why is that little pink thing crying??
+<<if $shellCount == 0 >>s
+
+Riley: Ugh...what happened...where am I...
+Is that...a castle...<i>more like a mound of sand<i>
+Octavia: <i>WAAAAAAAAAAAAAAAAAAAAAAAAAAA<i>
+Riley: Ah! Why is that little pink thing crying??
 <<endif>>
+
 ===
 title:Octavia
 position: -108,-317
