@@ -20,7 +20,7 @@ position: -357,-312
 //Hugo
 <<declare $visitOneHugo = false >>
 ===
-title: UnderwaterDia
+title:UnderwaterDia
 position: -377,-73
 ---
 //You are on Level {$castleLevel}
