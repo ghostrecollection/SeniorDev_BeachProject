@@ -10,6 +10,15 @@ public class SandCastleManager : MonoBehaviour
     private int progress; 
     private bool levelDone;
 
+    public  bool visitOneOct = false;
+    public  bool allLevelsCompleted = false; 
+
+    void Awake()
+{
+    if (variableStorage == null)
+        variableStorage = FindObjectOfType<VariableStorageBehaviour>();
+}
+
     void Start()
     {
         UpdateCastle();
@@ -31,6 +40,19 @@ public class SandCastleManager : MonoBehaviour
             variableStorage.SetValue("$castleLevel", progress);
             levelDone = (progress >= sandCastleStages.Count - 1);
             variableStorage.SetValue("$levelDone", levelDone);
+        }
+           if (progress >= 1)
+        {
+            visitOneOct = true;
+            variableStorage.SetValue("$visitOneOct", true);
+        }
+
+          if (progress >= 3 )
+        {
+            allLevelsCompleted = true;
+
+            variableStorage.SetValue("$allLevelsCompleted", true);
+
         }
     }
     public void OnLevelAdvanced()

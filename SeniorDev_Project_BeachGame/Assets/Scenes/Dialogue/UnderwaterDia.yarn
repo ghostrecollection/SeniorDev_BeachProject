@@ -3,13 +3,18 @@ position: -357,-312
 ---
 //Octavia
 <<declare $visitOneOct = false>>
+
 <<declare $visitTwoOct = false>>
+
 <<declare $allShellsCollected = false>>
 
 //<<declare $castleLevel = 0 >>
 //<<declare $shellCount = 0 >>
-<<declare $hasStarted = false>>
 
+<<declare $hasStarted = false>>
+<<declare $allLevelsCompleted = false>>
+
+<<declare $hasVisited = false>>
 
 //Simon
 <<declare $visitOneSim = false>>
@@ -21,6 +26,7 @@ position: -357,-312
 //Hugo
 <<declare $visitOneHugo = false >>
 ===
+
 title: UnderwaterDia
 ---
 
@@ -49,7 +55,29 @@ Riley: Yay! I got all the shells! I should talk to Octavia!
 title:Octavia
 position: -108,-317
 ---
-<<if $visitOneOct == false>>
+<<if $visitOneOct == true >>
+Octavia: Oh hello little one! Did you have a question?
+-> What shells do I need again?
+    Oh right! You need 25 simple shells, 25 sandollars, and 5 special shells!
+-> What are special shells?
+    Special shells are conch,cowrie, or calico clam shells!
+    I'm not too sure where to find them, but someone else might?
+-> I have your shells!!
+    <<if $allLevelsCompleted == true>>
+    Really?!?!?!? The day is saved!!! Oh Riley thank you so much!!! 
+    We HAVE to take a picture of your beautiful work!!
+    One second let me grab everyone for the photo!
+    <<load_scene "6_End">>
+    <<elseif $allLevelsCompleted == false>>
+            Really?!?!?!
+            Wait...aw man thats not funny...
+            Please don't joke...
+            <<endif>>
+
+    <<endif>>
+
+<<if $hasVisited == false && $visitOneOct == false>>
+
 Octavia:<i>sniffle sniffle<i> 
 Who's there?
 You there! Won't you help me please???
@@ -69,8 +97,8 @@ Octavia: Oh of course! I need 25 simple shells, 25 sanddollars, and 5 special sh
 I hope thats not too much! I'm counting on you <3
 There's a pipe that leads to an old shipwreck! It's right next to...
 what USED TO BE MY CASTLE...<i>sniff<i>... it's a good place to start...
-<<set $visitOneOct = true>>
-    <<elseif $visitOneOct == true>>
+<<set $hasVisited = true>>
+    <<elseif $hasVisited == true  && $visitOneOct == false>>
      Octavia: Oh hello little one! Did you have a question?
      -> What shells do I need again?
         Oh right! You need 25 simple shells, 25 sandollars, and 5 special shells!
@@ -87,7 +115,8 @@ what USED TO BE MY CASTLE...<i>sniff<i>... it's a good place to start...
             Wait...aw man thats not funny...
             Please don't joke...
             <<endif>>
-    <<endif>>
+<<endif>>
+
 ===
 title:Simon
 ---

@@ -938,7 +938,7 @@ Transform:
   m_GameObject: {fileID: 50403722}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.59, y: -235.69, z: 1.69}
+  m_LocalPosition: {x: -9.67, y: -235.69, z: 1.69}
   m_LocalScale: {x: 1, y: 5.3866, z: 7.1477}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5468,6 +5468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 696f70eecdf7b5b4b934eaadf6c249ff, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!136 &310191628
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9797,6 +9798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &432498564
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9853,6 +9855,135 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432498560}
   m_Mesh: {fileID: 8874647845098605231, guid: b01619f3ab52a3b4ba4d3dce014700fe, type: 3}
+--- !u!1 &444505773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 444505775}
+  - component: {fileID: 444505774}
+  m_Layer: 0
+  m_Name: CollectionSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &444505774
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444505773}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: d980bc24283024608b9ca7e1c3b6020f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &444505775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444505773}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.88392, y: 23.24846, z: 5.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &449540333
 GameObject:
   m_ObjectHideFlags: 0
@@ -12075,6 +12206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &555488553
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19611,6 +19743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &838185740
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22673,6 +22806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &993007934
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22798,6 +22932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &1000926552
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26293,6 +26428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &1098360308
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26520,6 +26656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &1154420131
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28602,7 +28739,7 @@ Transform:
   m_GameObject: {fileID: 1237843870}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04, y: 0.174, z: -0.011}
+  m_LocalPosition: {x: -0.04, y: -0.413, z: -0.011}
   m_LocalScale: {x: 1.075462, y: 1.075462, z: 1.0754621}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33168,6 +33305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &1428263880
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38138,6 +38276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &1707263679
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42354,6 +42493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &1819819379
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42479,6 +42619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &1821527953
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43191,6 +43332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
   item: {fileID: 11400000, guid: 2f2f7b24abb494031af5c4f6453216d1, type: 2}
+  collectSound: {fileID: 444505774}
 --- !u!23 &1900799517
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50425,6 +50567,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1395974278}
     m_Modifications:
+    - target: {fileID: 5714782934486593867, guid: 89d8c8778860d3747b5562df4cb9d894, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 444505774}
     - target: {fileID: 6783337178850321703, guid: 89d8c8778860d3747b5562df4cb9d894, type: 3}
       propertyPath: m_Name
       value: ScallopShell
@@ -50499,3 +50645,4 @@ SceneRoots:
   - {fileID: 791030609}
   - {fileID: 50403723}
   - {fileID: 310191625}
+  - {fileID: 444505775}

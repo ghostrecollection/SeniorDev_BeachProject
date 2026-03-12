@@ -27,6 +27,7 @@ public class SceneChangerViolet : MonoBehaviour
 
     IEnumerator LoadLevel1()
     {
+        
         transitionAnim.SetTrigger("End");
         yield return new WaitForSeconds(3);
         //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
@@ -35,6 +36,7 @@ public class SceneChangerViolet : MonoBehaviour
 
     private Animator GetEndAnim()
     {
+
         GetComponent<Animator>();
 
         return transitionAnim;
