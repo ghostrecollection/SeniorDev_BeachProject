@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80ac8294bd104bc5a3e86f5c3262e67, type: 3}
   m_Name: SpecialShell3
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  icon: {fileID: 21300000, guid: f128a2546a8ed4c6c8d54e0d797cd593, type: 3}
+  icon: {fileID: 21300000, guid: a8cd3f04942bd4595be0369acdcaa2d5, type: 3}
   itemName: SpecialShell3
   itemCost: 4
