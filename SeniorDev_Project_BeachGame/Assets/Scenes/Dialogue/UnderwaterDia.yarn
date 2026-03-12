@@ -26,14 +26,18 @@ position: -377,-73
 //You are on Level {$castleLevel}
 //You have {$shellCount} Shells
 
-<<if $shellCount == 0 >>s
-
+<<if $shellCount == 0 >>
 Riley: Ugh...what happened...where am I...
 Is that...a castle...<i>more like a mound of sand<i>
 Octavia: <i>WAAAAAAAAAAAAAAAAAAAAAAAAAAA<i>
 Riley: Ah! Why is that little pink thing crying??
+<<if $shellCount >= 0 >>
+Riley:Nice! I have {$shellCount}shells!
 <<endif>>
-
+<<if $shellCount == 56>>
+Riley:Yay! I got all the shells! I should talk to Octavia!
+<<endif>>
+<<endif>>
 ===
 title:Octavia
 position: -108,-317
@@ -54,7 +58,7 @@ Riley: Of course Miss...uh...what's your name?
 Octavia: Octavia, dear! You are my savior!!!!
 Riley: No challenge is too tough for me hehe!!
 But actually...how many shells do I need to get?
-Octavia: Oh of course! I need 25 simple shells, 15 sanddollars, and 5 special shells!
+Octavia: Oh of course! I need 25 simple shells, 25 sanddollars, and 5 special shells!
 I hope thats not too much! I'm counting on you <3
 There's a pipe that leads to an old shipwreck! That would be a good place to start, but be careful!
 <<set $visitOneOct = true>>
