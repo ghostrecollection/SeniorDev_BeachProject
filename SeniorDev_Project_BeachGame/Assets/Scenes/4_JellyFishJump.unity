@@ -5467,7 +5467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634b1df18039643698e00f207c3b0a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
-  item: {fileID: 11400000, guid: 696f70eecdf7b5b4b934eaadf6c249ff, type: 2}
+  item: {fileID: 11400000, guid: 9ffcf5958c12b442c804164bb9a3d9f5, type: 2}
   collectSound: {fileID: 444505774}
 --- !u!136 &310191628
 CapsuleCollider:
