@@ -31,7 +31,7 @@ Riley: Ugh...what happened...where am I...
 Is that...a castle...<i>more like a mound of sand<i>
 Octavia: <i>WAAAAAAAAAAAAAAAAAAAAAAAAAAA<i>
 Riley: Ah! Why is that little pink thing crying??
-<<if $shellCount >= 0 >>
+<<if $shellCount >= 1 >>
 Riley:Nice! I have {$shellCount}shells!
 <<endif>>
 <<if $shellCount == 56>>
@@ -60,7 +60,8 @@ Riley: No challenge is too tough for me hehe!!
 But actually...how many shells do I need to get?
 Octavia: Oh of course! I need 25 simple shells, 25 sanddollars, and 5 special shells!
 I hope thats not too much! I'm counting on you <3
-There's a pipe that leads to an old shipwreck! That would be a good place to start, but be careful!
+There's a pipe that leads to an old shipwreck! It's right next to...
+what USED TO BE MY CASTLE...<i>sniff<i>... it's a good place to start...
 <<set $visitOneOct = true>>
     <<elseif $visitOneOct == true>>
      Octavia: Oh hello little one! Did you have a question?
@@ -99,7 +100,7 @@ Guh...2 more minutes...
     Riley: ...?
     Simon: ...?
     Oh...the shells...jellyfish cove is the place to go
-    ...there's an old pipe leading to it near Hugo's place
+    ...there's an old pipe leading to it behind me...
     Lots of simple shells and jellyfish...wish they were yummy...
     Riley: Uh well...thanks!
     <<if $levelsCompleted >= 1>>
@@ -128,16 +129,20 @@ Hey you! You saw it didn't you?
 Luis: Wait...kid...did you need something?
 Riley: Yes! I'm looking for some sandollars but I don't know where to look
 Angel: Oh the urchin cave! It has a tonnnnn of sanddollars!
-Luis: Well he isn't lying...but it's dangerous in there...
-The urchins are nice,but they've got the zoomies
-Just watch out and try not to get pricked!
+Angel:There's a pipe leading to it! It has a bunch of barnacles on it!
+Angel:Eeeeeyuck!!
+Luis: You're the barnancle Angel...
+Angel: Hey!
+Luis: Anyways, it's a great place to find what you need...but be careful
+Luis: The urchins are nice,but they've got the zoomies
+Luis: Just watch out and try not to get pricked!
 <<if $levelsCompleted >= 2>>
     <<endif>>
 <<set $visitOneShrimp = true>>
 <<elseif $visitOneShrimp == true>>
     Angel:Hey kid did you need any help?
     Luis:Probably not from you...
-    Angel:Hey!
+    Angel:Stahp it!!!!
      -> Sorry to interupt, but where can I find sandollars again?
         Luis:Sorry about that! If you go to the Urchin cave you are sure to find some!
         Angel:But be careful!!
@@ -151,12 +156,15 @@ Hugo: Hey there guppy! The name's Hugo nice to meet 'cha!
 Riley: Guppy? But i'm not a fish...?
 Hugo: Well yer a youngin ain't ya? I mean no harm, yer a little one thats all!
 Riley: Hm, that's true! But the name is Riley!
-Hugo: It's nice to meet you Guppy Riley!
+Hugo: It's nice to meet you Guppy Riley! Let me know if you need anything!
 <<set $visitOneHugo = true>>
 <<elseif $visitOneHugo == true>>
     Hugo: Hey Guppy Riley! What can I do for ya?
-        -> Where can I find simple shells?
-            Oh well the ol' shipwreck of course!
-            There's both simple shells and some of those er um...sandollars!
+        -> Where can I find special shells?
+            Hugo: Well there are sure to be special shells through them pipes!
+            Hugo: I heard they glow unlike the regular shells...
+            <i>looks around<i>
+            Hugo:And I also heard that there are some special shells hidden right here in the kingdom
+            Hugo: But you didn't hear it from me <i>wink<i>
 <<endif>>
 ===
