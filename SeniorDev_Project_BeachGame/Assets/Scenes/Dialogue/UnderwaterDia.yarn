@@ -103,7 +103,7 @@ what USED TO BE MY CASTLE...<i>sniff<i>... it's a good place to start...
     <<elseif $hasVisited == true  && $visitOneOct == false>>
      Octavia: Oh hello little one! Did you have a question?
      -> What shells do I need again?
-        Oh right! You need 25 simple shells, 25 sandollars, and 5 special shells!
+        Oh right! You need 25 simple shells, 25 sandollars, and 3 special shells!
      -> What are special shells?
         Special shells are conch,cowrie, or calico clam shells!
         I'm not too sure where to find them, but someone else might?
