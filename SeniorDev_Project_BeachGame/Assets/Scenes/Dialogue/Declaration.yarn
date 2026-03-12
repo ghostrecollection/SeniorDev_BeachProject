@@ -1,0 +1,7 @@
+﻿title: Declaration
+---
+<<declare $castleLevel = 0 >>
+
+<<declare $shellCount = 0 >>
+
+===
