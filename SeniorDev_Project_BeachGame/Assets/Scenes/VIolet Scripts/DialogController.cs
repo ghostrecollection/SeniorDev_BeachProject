@@ -13,6 +13,8 @@ public class DialogController : MonoBehaviour
 
     void Start()
     {
+        if (pInput == null)
+        return;
         inputManager = GetComponentInParent<InputManager>();
         playerMovement = GetComponentInParent<FollowPlayerControl>();
         

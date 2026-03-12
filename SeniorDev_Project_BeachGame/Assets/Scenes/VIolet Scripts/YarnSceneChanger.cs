@@ -17,4 +17,5 @@ public class YarnSceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    
 }
