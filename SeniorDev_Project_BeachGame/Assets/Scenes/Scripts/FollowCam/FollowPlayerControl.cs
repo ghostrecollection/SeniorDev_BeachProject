@@ -44,7 +44,7 @@ public class FollowPlayerControl : MonoBehaviour
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         // Grab Player Input Manager Script.
         input = GetComponent<InputManager>();
@@ -55,6 +55,7 @@ public class FollowPlayerControl : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
 
     }
+
 
     // Update is called once per frame
     void Update()
@@ -95,6 +96,14 @@ public class FollowPlayerControl : MonoBehaviour
 
     void OnMove()
     {
+        if (input == null || anim == null || controller == null)
+        return;
+        
+        if (input == null || anim == null || controller == null)
+        {
+            Debug.LogError("FollowPlayerControl missing references!");
+            return;
+        }
         float targetAnimSpeed = 0f;
 
         currentSpeed = 0;
