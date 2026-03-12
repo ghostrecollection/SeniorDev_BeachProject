@@ -4,17 +4,19 @@ using UnityEngine.InputSystem;
 public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager instance;
-    public InputManager inputManager;
-    public  FollowPlayerControl playerFollow;
+   public InputManager inputManager;
+    public FollowPlayerControl playerFollow;
     public PlayerInput pInput;
 
 
+
     public GameState CurrentState = new GameState();
-    void Awake()
+   void Awake()
     {
         if (instance == null)
         {
             instance = this;
+           
         }
         else
         {
@@ -22,30 +24,34 @@ public class GameStateManager : MonoBehaviour
             return;
         }
 
-        inputManager = FindFirstObjectByType<InputManager>();
+        if (inputManager == null)
+            inputManager = FindFirstObjectByType<InputManager>();
 
-        playerFollow = FindFirstObjectByType<FollowPlayerControl>();
-        
-        pInput = GetComponent<PlayerInput>();
-        
+        if (playerFollow == null)
+            playerFollow = FindFirstObjectByType<FollowPlayerControl>();
+
+        if (pInput == null)
+            pInput = FindFirstObjectByType<PlayerInput>();
     }
 
     public void SetState(GameState.gameState newState)
     {
         CurrentState.State = newState;
 
+        bool isWalking = (newState == GameState.gameState.WALKING);
+
         if (inputManager != null)
-        {
-            inputManager.enabled = (newState == GameState.gameState.WALKING);
-        }
+            inputManager.enabled = isWalking;
+
         if (playerFollow != null)
-        {
-            //playerFollow.enabled = (newState == GameState.gameState.WALKING);
-        }
+            playerFollow.enabled = isWalking;
+
         if (pInput != null)
-        {
-            pInput.enabled = (newState == GameState.gameState.WALKING);
-        }
-        
+            pInput.enabled = isWalking;
+    }
+
+    void Start()
+    {
+        SetState(GameState.gameState.WALKING);
     }
 }

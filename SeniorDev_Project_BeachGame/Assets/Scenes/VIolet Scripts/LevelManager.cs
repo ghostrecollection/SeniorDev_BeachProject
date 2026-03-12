@@ -1,14 +1,10 @@
 using UnityEngine;
-using Yarn.Unity;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
-    public VariableStorageBehaviour variableStorage;
-
-    public int currentLevel;
-    
     public int shellCount;
+    public int currentLevel;
 
     void Awake()
     {
@@ -17,20 +13,28 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
-     public void SetShellCount(int amount)
+    public void SetShellCount(int amount)
     {
-        shellCount = amount;
+        shellCount += amount;
 
+        if (YarnUpdater.instance != null)
+        {
+            YarnUpdater.instance.UpdateShells();
+        }
     }
 
     public void AdvanceLevel()
     {
         currentLevel++;
-    }  
 
+        if (YarnUpdater.instance != null)
+        {
+            YarnUpdater.instance.UpdateLevel();
+            
+        }
+    }
 }
