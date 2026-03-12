@@ -4,21 +4,16 @@ using Yarn.Unity;
 
 public class YarnSceneChanger : MonoBehaviour
 {
-    public static YarnSceneChanger Instance;
 
-    void Awake()
+    public DialogueRunner dialogueRunner;
+
+    public void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
+        
+        dialogueRunner.AddCommandHandler<string>("load_scene", LoadScene);
     }
 
-    [YarnCommand("load_scene")]
-    public void YarnLoadScene(string sceneName)
+    private void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
