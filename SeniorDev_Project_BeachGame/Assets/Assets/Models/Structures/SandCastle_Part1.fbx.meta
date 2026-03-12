@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c524a592908c2d644ae4175829ef18f8
+guid: ead4d46649767814b8fc270dea87109c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -9,6 +9,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: SandCastle_Part1_Material
     second: {fileID: 2100000, guid: 47e08434a52f2d049b534d12cd368c7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sanddollar_Material
+    second: {fileID: 2100000, guid: 7fd69cae4228e304cb9e0a7a53cd2942, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shell1_Material
+    second: {fileID: 2100000, guid: 2a603e2a09fe89c4dbf3acef3732f717, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

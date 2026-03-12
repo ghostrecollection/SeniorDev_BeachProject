@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6d5e215042fc4ca40ae7314ac26e404d
+guid: 308f3136b4af82e41b26018d8b148574
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: SandCastle_Part1_Material
-    second: {fileID: 2100000, guid: 47e08434a52f2d049b534d12cd368c7b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SandCastle_Part2_Material
-    second: {fileID: 2100000, guid: cd168fa1492d33f49a8d2aadc64b492b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SandCastle_Part3_Material
-    second: {fileID: 2100000, guid: 49362d65bf9111441a3a0f2652bddec7, type: 2}
+      name: SandCastle_Destroyed_Material
+    second: {fileID: 2100000, guid: f325f82d6cdc7b64186a298e9989267d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -106,7 +96,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 295
+    globalScale: 2.95
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
