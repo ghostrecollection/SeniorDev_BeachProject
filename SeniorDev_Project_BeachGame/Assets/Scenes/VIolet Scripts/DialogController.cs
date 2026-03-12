@@ -16,7 +16,7 @@ public class DialogController : MonoBehaviour
         inputManager = GetComponentInParent<InputManager>();
         playerMovement = GetComponentInParent<FollowPlayerControl>();
         
-        PlayerInput pInput = GetComponent<PlayerInput>();
+        pInput = GetComponentInParent<PlayerInput>();
     }
 
     private void OnEnable()
