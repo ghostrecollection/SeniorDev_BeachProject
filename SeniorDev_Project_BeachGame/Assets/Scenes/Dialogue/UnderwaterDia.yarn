@@ -6,8 +6,9 @@ position: -357,-312
 <<declare $visitTwoOct = false>>
 <<declare $allShellsCollected = false>>
 
-<<declare $castleLevel = 0 >>
-<<declare $shellCount = 0 >>
+//<<declare $castleLevel = 0 >>
+//<<declare $shellCount = 0 >>
+<<declare $hasStarted = false>>
 
 
 //Simon
@@ -20,24 +21,30 @@ position: -357,-312
 //Hugo
 <<declare $visitOneHugo = false >>
 ===
-title:UnderwaterDia
-position: -377,-73
+title: UnderwaterDia
 ---
+
 //You are on Level {$castleLevel}
 //You have {$shellCount} Shells
 
-<<if $shellCount == 0 >>
+<<if $hasStarted == false>>
+
 Riley: Ugh...what happened...where am I...
 Is that...a castle...<i>more like a mound of sand<i>
 Octavia: <i>WAAAAAAAAAAAAAAAAAAAAAAAAAAA<i>
 Riley: Ah! Why is that little pink thing crying??
-<<if $shellCount >= 1 >>
-Riley:Nice! I have {$shellCount}shells!
+<<set $hasStarted = true>>
 <<endif>>
+
+<<if $shellCount >= 1>>
+Riley: Nice! I have {$shellCount} shells!
+<<endif>>
+
 <<if $shellCount == 56>>
-Riley:Yay! I got all the shells! I should talk to Octavia!
+Riley: Yay! I got all the shells! I should talk to Octavia!
 <<endif>>
-<<endif>>
+
+
 ===
 title:Octavia
 position: -108,-317
