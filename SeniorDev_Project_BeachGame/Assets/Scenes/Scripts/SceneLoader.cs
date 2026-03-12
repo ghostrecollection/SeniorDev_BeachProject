@@ -1,24 +1,30 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 using Yarn.Unity;
 
 public class SceneLoader : MonoBehaviour
 {
-    public static SceneLoader Instance;
-
-    void Awake()
+    
+    public static SceneLoader Insance;
+   
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        Instance = this;
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 
     public void LoadScene(string sceneName)
+
     {
         SceneManager.LoadScene(sceneName);
     }
 
-    [YarnCommand("load_scene")]
-    public void YarnLoadScene(string sceneName)
-    {
-        LoadScene(sceneName);
-    }
+
 }

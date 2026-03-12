@@ -27,7 +27,6 @@ public class SandCastleManager : MonoBehaviour
     {
         if (LevelManager.instance == null)
         {
-            Debug.LogError("LevelManager.instance is null!");
             return;
         }
         progress = LevelManager.instance.currentLevel;

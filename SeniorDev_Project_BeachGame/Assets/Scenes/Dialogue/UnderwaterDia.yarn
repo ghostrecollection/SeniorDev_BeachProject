@@ -76,6 +76,8 @@ Octavia: Oh hello little one! Did you have a question?
 
     <<endif>>
 
+
+
 <<if $hasVisited == false && $visitOneOct == false>>
 
 Octavia:<i>sniffle sniffle<i> 
@@ -106,11 +108,11 @@ what USED TO BE MY CASTLE...<i>sniff<i>... it's a good place to start...
         Special shells are conch,cowrie, or calico clam shells!
         I'm not too sure where to find them, but someone else might?
      -> I have your shells!!
-        <<if $allShellsCollected == false>>
+        <<if $allShellsCollected == true>>
             Really?!?!?!? The day is saved!!! Oh Riley thank you so much!!! 
             We HAVE to take a picture of your beautiful work!!
             One second let me grab everyone for the photo!
-        <<elseif $allShellsCollected == true>>
+        <<elseif $allShellsCollected == false>>
             Really?!?!?!
             Wait...aw man thats not funny...
             Please don't joke...
